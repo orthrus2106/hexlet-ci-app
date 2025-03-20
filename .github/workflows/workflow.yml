@@ -22,4 +22,4 @@ jobs:
       # Запускаем линтер
       - name: run linter
         run: make lint
-        -uses: hexlet-components/hello-from-hexlet-action@release
+      - uses: hexlet-components/hello-from-hexlet-action@release
