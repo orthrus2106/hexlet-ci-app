@@ -8,15 +8,17 @@ jobs:
 
     steps:
       # Клонируем репозиторий
-      - uses: actions/checkout@v4
+      - name: checkout repository
+      uses: actions/checkout@v4
       # Устанавливаем Node.js
-      - uses: actions/setup-node@v4
+      - name: setup node.js
+      uses: actions/setup-node@v4
       # Ставим зависимости
       - name: make setup
-      - run: make setup
+      run: make setup
       # Запускаем тесты
       - name: run tests
-      - run: make test
+      run: make test
       # Запускаем линтер
       - name: run linter
-      - run: make lint
+      run: make lint
